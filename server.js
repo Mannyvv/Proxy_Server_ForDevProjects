@@ -6,9 +6,6 @@ const host = "0.0.0.0"
 
 
 
-
-
-
 app.get('/search', (req, res) => {
   searchTerm = req.query.q
   console.log(req.query.q)
@@ -18,8 +15,8 @@ app.get('/search', (req, res) => {
     'Origin, X-Requested-With, Content-Type, Accept'
   )
 
-  // const apiURL = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`
-  // Use your personal API key(current API expired)
+  //const apiURL = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`
+  //Use your personal API key(current API expired)
   const apiURL = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=AIzaSyDGOedEhSH-6FHSDEKvuKQy-99GWVppul4`
 
 
@@ -32,7 +29,7 @@ app.get('/search', (req, res) => {
 
     })
     .catch(error => {
-      // Handle any errors that occurred during the API call
+      //Handle any errors that occurred during the API call
       console.error('API call error:', error);
       res.status(500).json({ error: 'Failed to fetch data from the external API.' });
     });
