@@ -9,6 +9,6 @@ Setup a quick Express proxy server for projects in development that are having i
 
 
 ## Install
-Change directory to source file where Dockerfile is located
+Change directory to source file where Dockerfile is located  
 ```docker build . <your image name>```  
 ```docker run -d -p <open localhost port>:3000 <your image name>```
